@@ -9,10 +9,12 @@ import AntDesign from 'react-native-vector-icons/AntDesign'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import DishRow from '../components/DishRow'
 import BasketIcon from '../components/BasketIcon'
+import { useDispatch } from 'react-redux'
 
 
 const ResturantScreen = () => {
     const navigation = useNavigation(); 
+    const dispatch = useDispatch(); 
 
     // data passed vie natigation
     const {params: {id, imgUrl, title, rating, genre, address, description, dishes, long, lat}} = useRoute(); 
@@ -23,6 +25,12 @@ const ResturantScreen = () => {
             headerShown: false,
         })
     }, [])
+
+    // useEffect for resturantSlice 
+    useEffect(() => {
+        dispatch(setResturant({ id, imgUrl, title, rating, genre, address, description, dishes, long, lat }))
+    }, [dispatch])
+
 
     // jsx
     return (

@@ -7,6 +7,10 @@ import { TailwindProvider } from 'tailwindcss-react-native';
 import HomeScreen from './screens/HomeScreen';
 import ResturantScreen from './screens/ResturantScreen';
 
+// redux 
+import { Provider } from 'react-redux';
+import store from './redux/store'
+
 export default function App() {
   const Stack = createNativeStackNavigator();
 
