@@ -18,7 +18,6 @@ const HomeScreen = () => {
         })
     }, [])
 
-
     // jsx
     return (
         <SafeAreaView className="bg-white pt-5 mb-3 flex-1">
