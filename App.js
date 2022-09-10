@@ -6,6 +6,7 @@ import { TailwindProvider } from 'tailwindcss-react-native';
 // screens
 import HomeScreen from './screens/HomeScreen';
 import ResturantScreen from './screens/ResturantScreen';
+import BasketScreen from './screens/BasketScreen'
 
 // redux 
 import { Provider } from 'react-redux';
@@ -26,6 +27,10 @@ export default function App() {
               <Stack.Screen 
                 name="Resturant" 
                 component={ResturantScreen}
+              />
+              <Stack.Screen 
+                name="Basket" 
+                component={BasketScreen}
               />
             </Stack.Navigator>
         </NavigationContainer>
